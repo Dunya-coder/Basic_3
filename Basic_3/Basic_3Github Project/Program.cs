@@ -10,8 +10,26 @@ namespace Basic_3Github_Project
     {
         static void Main(string[] args)
         {
-           
-            
+            //1
+            int number1, i;
+            string s = "";
+            number1 = Convert.ToInt32(Console.ReadLine());
+            if (number1 % 1 == 0)
+            {
+                for (i = 2; i < number1; i++)
+                {
+                    if (number1 % i != 0)
+                    {
+                        s = "tub";
+                    }
+                    else
+                    {
+                        s = "tub emas"; break;
+                    }
+                }
+                Console.WriteLine(s);
+            }
+
             //2
             int l;
             l = Convert.ToInt32(Console.ReadLine());
@@ -22,31 +40,57 @@ namespace Basic_3Github_Project
             }
 
             //3
-            int n,i=1,a,p=1;
+            int n,i3=1,a,p=1;
             n = Convert.ToInt32(Console.ReadLine());
             a = Convert.ToInt32(Console.ReadLine());
             if (a >= 0)
             {
-                while (i <= a)
+                while (i3 <= a)
                 {
                     p *= n;
-                    i++;
+                    i3++;
                 }
                 Console.WriteLine($"{n}^{a}=" + p);
             }
             //4
-            int h,s=0,nn;
+            int h,s4=0,nn;
             Console.Write("\n to'plam elementlar soni,n=");
             nn = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
-            for (int j=0;j<nn;j++)
+            for (int j4=0;j4<nn;j4++)
             {
                 Console.Write("h=");
                 h = Convert.ToInt32(Console.ReadLine());
-                s += h;
+                s4 += h;
             }
-            Console.WriteLine(s);
+            Console.WriteLine(s4);
             //5
+            int num, j = 0, m = 0, ii = 0;
+            num = Convert.ToInt32(Console.ReadLine());
+            ii = num;
+            while (num != 0)
+            {
+                num /= 10; j++;
+
+            }
+
+            num = ii;
+            while (num != 0)
+            {
+
+
+                m += (int)Math.Pow((num % 10), j);
+                num /= 10;
+            }
+            num = ii;
+            if (num == m)
+            {
+                Console.WriteLine("armstrong");
+            }
+            else
+            {
+                Console.WriteLine("armstrong emas");
+            }
 
             //6
             int n_6,i6=1;
